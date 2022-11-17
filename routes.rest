@@ -1,0 +1,17 @@
+// LOCALHOST
+### request all data in collection
+GET http://localhost:8080/gameapp
+### request a specific entry in database.
+GET http://localhost:8080/gameapp/6375b324e64fd346e0d5761f
+### create game 
+POST http://localhost:8080/gameapp HTTP/1.1
+content-type:application/json
+
+{
+    "title": "Everdell",
+    "publishYear": "2018",
+    "rating": "8.1",
+    "designer": "James A. Wilson",
+    "publisher": "Starling Games",
+    "catagory": ["Animals","Card Game","City Building","Fantasy"]
+}

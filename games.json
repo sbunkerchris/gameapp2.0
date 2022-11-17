@@ -1,0 +1,35 @@
+{
+    "game": {
+      "title": "Gloomhaven",
+      "publishYear": "2017",
+      "rating": "8.7",
+      "designer": "Isaac Childres",
+      "publisher": "Cephalofair Games",
+      "catagory": ["Adventure","Exploration","Fantasy","Fighting","Miniatures"]
+    },
+    "game2": {
+        "title": "Scythe",
+        "publishYear": "2016",
+        "rating": "8.2",
+        "designer": "Jamey Stegmaier",
+        "publisher": "Stonemaier Games",
+        "catagory": ["Economic","Fighting","Science Fiction","Territory Building"]
+      },
+    "game3":  {
+        "title": "Wingspan",
+        "publishYear": "2019",
+        "rating": "8.1",
+        "designer": "Elizabeth Hargrave",
+        "publisher": "Stonemaier Games",
+        "catagory": ["Animals","Card Game","Educational"]
+      },
+    "game4":  {
+        "title": "Root",
+        "publishYear": "2018",
+        "rating": "8.2",
+        "designer": "Cole Wehrle",
+        "publisher": "Leder Games",
+        "catagory": ["Animals","Fantasy","Wargame"]
+      }
+  }
+  
