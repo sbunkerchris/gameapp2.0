@@ -15,3 +15,20 @@ content-type:application/json
     "publisher": "Starling Games",
     "catagory": ["Animals","Card Game","City Building","Fantasy"]
 }
+// Production
+### request all data in collection
+GET https://gameapp.onrender.com/gameapp
+### request a specific entry in database.
+GET https://gameapp.onrender.com/gameapp/6375c1c6ca5cc6a2d6ce95db
+### create game 
+POST https://gameapp.onrender.com/gameapp HTTP/1.1
+content-type:application/json
+
+{
+    "title": "Everdell",
+    "publishYear": "2018",
+    "rating": "8.1",
+    "designer": "James A. Wilson",
+    "publisher": "Starling Games",
+    "catagory": ["Animals","Card Game","City Building","Fantasy"]
+}
