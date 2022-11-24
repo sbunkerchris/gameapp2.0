@@ -42,8 +42,45 @@ const getAll = async (req, res, next) => {
     }
   };
 
+  const updateGame = async (req, res) => {
+    const userId = new ObjectId(req.params.id);
+    // be aware of updateOne if you only want to update specific fields
+    const game = {
+      title: req.body.title,
+      publishYear: req.body.publishYear,
+      rating: req.body.rating,
+      designer: req.body.designer,
+      publisher: req.body.publisher,
+      catagory: req.body.catagory
+    };
+    const response = await mongodb
+      .getDb()
+      .db()
+      .collection('games')
+      .replaceOne({ _id: userId }, game);
+    console.log(response);
+    if (response.modifiedCount > 0) {
+      res.status(204).send();
+    } else {
+      res.status(500).json(response.error || 'Some error occurred while updating the contact.');
+    }
+  };
+  
+  const deleteGame = async (req, res) => {
+    const userId = new ObjectId(req.params.id);
+    const response = await mongodb.getDb().db().collection('games').remove({ _id: userId }, true);
+    console.log(response);
+    if (response.deletedCount > 0) {
+      res.status(204).send();
+    } else {
+      res.status(500).json(response.error || 'Some error occurred while deleting the contact.');
+    }
+  }; 
+
 module.exports = {
     getAll,
     getSingle,
-    createGame
+    createGame,
+    updateGame,
+    deleteGame
 };

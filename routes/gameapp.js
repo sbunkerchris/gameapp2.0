@@ -9,4 +9,8 @@ router.get('/:id', gameController.getSingle);
 
 router.post('/', gameController.createGame);
 
+router.put('/:id', gameController.updateGame);
+
+router.delete('/:id', gameController.deleteGame);
+
 module.exports = router;

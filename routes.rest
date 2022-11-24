@@ -2,7 +2,7 @@
 ### request all data in collection
 GET http://localhost:8080/gameapp
 ### request a specific entry in database.
-GET http://localhost:8080/gameapp/6375b324e64fd346e0d5761f
+GET http://localhost:8080/gameapp/6375c1c6ca5cc6a2d6ce95db
 ### create game 
 POST http://localhost:8080/gameapp HTTP/1.1
 content-type:application/json
@@ -15,6 +15,21 @@ content-type:application/json
     "publisher": "Starling Games",
     "catagory": ["Animals","Card Game","City Building","Fantasy"]
 }
+###
+PUT http://localhost:8080/gameapp/6375c1c6ca5cc6a2d6ce95db HTTP/1.1
+content-type: application/json
+
+{
+    "title": "Everdell 2",
+    "publishYear": "2018 e",
+    "rating": "8.1",
+    "designer": "James A. Wilson III",
+    "publisher": "Starling Games",
+    "catagory": ["Animals","Card Game","City Building","Fantasy"]
+}
+### delete contact
+DELETE http://localhost:8080/gameapp/6375c1c6ca5cc6a2d6ce95db HTTP/1.1
+
 // Production
 ### request all data in collection
 GET https://gameapp.onrender.com/gameapp
@@ -32,3 +47,18 @@ content-type:application/json
     "publisher": "Starling Games",
     "catagory": ["Animals","Card Game","City Building","Fantasy"]
 }
+### edit contact 
+PUT https://gameapp.onrender.com/gameapp/6375c1c6ca5cc6a2d6ce95db HTTP/1.1
+content-type: application/json
+
+{
+    "title": "Everdell 2",
+    "publishYear": "2018e",
+    "rating": "8.1",
+    "designer": "James A. Wilson III",
+    "publisher": "Starling Games",
+    "catagory": ["Animals","Card Game","City Building","Fantasy"]
+}
+### delete contact
+DELETE http://localhost:8080/contacts/6375c1c6ca5cc6a2d6ce95db HTTP/1.1
+###
